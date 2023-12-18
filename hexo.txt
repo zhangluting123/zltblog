@@ -1,0 +1,31 @@
+C:\Users\zlt>e:
+E:\>cd workspace
+E:\workspace>cd hexoblog
+
+hexo server（hexo s）
+hexo new [文件名]
+hexo new page --path about/me "About me"
+
+# 1、清除 hexo 的缓存
+hexo clean
+# 生成静态网站文件
+hexo g  
+# 上传到远程仓库
+hexo d  
+# 2、采用一键部署
+hexo g --d
+
+Gitee Pages 需要手动更新
+
+
+可以直接到根目录 /source/_posts 目录下，创建一个.md 文件进行编写
+---
+title: 文章名称
+date: 2020-07-30 16:46:07(创建时间)
+tags: 标签名
+categories: 分类
+description: 描述
+comments: 是否开启评论(true or false)
+---
+
+

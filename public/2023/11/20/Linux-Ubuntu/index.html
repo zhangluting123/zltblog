@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     
+    <meta charset="UTF-8">
+    <title>Ubuntu - Drmmsu的个人主页</title>
+    <link rel="shortcut icon" href="/drmmsu/static/img/icon.png">
+    <link rel="icon" href="/static/img/icon.png" sizes="192x192"/>
+    
+<link rel="stylesheet" href="/drmmsu/static/kico.css">
+<link rel="stylesheet" href="/drmmsu/static/hingle.css">
+
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+    <meta property="og:site_name" content="Drmmsu的个人主页">
+    <meta property="og:title" content="Ubuntu"/>
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <header>
+    <div class="head-title">
+        <h4>Drmmsu的个人主页</h4>
+    </div>
+    <div class="head-action">
+        <div class="toggle-btn"></div>
+        <div class="light-btn"></div>
+        <div class="search-btn"></div>
+    </div>
+    <form class="head-search" method="post">
+        <input type="text" name="s" placeholder="搜索什么？">
+    </form>
+    <nav class="head-menu">
+        <a href="/drmmsu/">首页</a>
+        <div class="has-child">
+            <a>分类</a>
+            <div class="sub-menu">
+                <a class="category-link" href="/drmmsu/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">基础知识</a>
+            </div>
+        </div>
+        
+            <a href="/drmmsu/about/me">关于我</a>
+        
+    </nav>
+</header>
+
+    <main>
+    <div class="wrap min">
+        <section class="post-title">
+            <h2>Ubuntu</h2>
+            <div class="post-meta">
+                <time class="date">2023.11.20</time>
+            
+                <span class="category"><a class="category-link" href="/drmmsu/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">基础知识</a></span>
+            
+            </div>
+        </section>
+        <article class="post-content">
+        
+            <blockquote>
+<p>hhhh</p>
+</blockquote>
+<p>查看系统版本</p>
+<pre class="line-numbers language-none"><code class="language-none">cat &#x2F;etc&#x2F;issue<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h2 id="1-安装Ubuntu："><a href="#1-安装Ubuntu：" class="headerlink" title="1. 安装Ubuntu："></a>1. 安装Ubuntu：</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38189484/article/details/105237757">https://blog.csdn.net/qq_38189484&#x2F;article&#x2F;details&#x2F;105237757</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41349068/article/details/115456013">https://blog.csdn.net/qq_41349068&#x2F;article&#x2F;details&#x2F;115456013</a></p>
+<h3 id="1-1-软件源"><a href="#1-1-软件源" class="headerlink" title="1.1  软件源"></a>1.1  软件源</h3><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/kennywjt/p/13035367.html">https://www.cnblogs.com/kennywjt/p/13035367.html</a></p>
+<p>Ubuntu 的软件源配置文件是?&#x2F;etc&#x2F;apt&#x2F;sources.list。将系统自带的该文件做个备份，将该文件替换为下面内容，即可使用。</p>
+<ol>
+<li>备份：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">cp</span> /etc/apt/sources.list /etc/apt/sources.list.backup<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="2">
+<li>修改配置（见sources.list内容）：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> gedit /etc/apt/sources.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="3">
+<li>默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+<span class="token comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse</span>
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+<span class="token comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse</span>
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+<span class="token comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse</span>
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+<span class="token comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="4">
+<li>更新源</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="1-2-添加环境变量"><a href="#1-2-添加环境变量" class="headerlink" title="1.2  添加环境变量"></a>1.2  添加环境变量</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看环境变量</span>
+<span class="token builtin class-name">echo</span> <span class="token environment constant">$PATH</span>
+
+<span class="token comment"># ===临时设置环境变量，当前bash生效===</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>路径:<span class="token environment constant">$PATH</span> <span class="token comment"># 或 export PATH=$PATH:路径</span>
+    
+<span class="token comment"># ===永久设置环境变量(1)===</span>
+<span class="token function">sudo</span> gedit /etc/environment
+<span class="token comment"># 文件后面加":路径"并保存</span>
+<span class="token builtin class-name">source</span> /etc/environment <span class="token comment"># 使其生效，仅在当前bash</span>
+<span class="token comment"># 启动新bash不生效，重启系统后全局生效</span>
+
+<span class="token comment"># ===永久设置环境变量(2)===</span>
+<span class="token function">vim</span> /etc/profile
+<span class="token comment"># 添加</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">JAVA_HOME</span><span class="token operator">=</span>/usr/local/java/jdk1.8  <span class="token comment">#按自己的路径填</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token variable">$JAVA_HOME</span>/bin
+<span class="token comment"># 让配置文件生效</span>
+<span class="token builtin class-name">source</span> /etc/profile
+<span class="token comment"># 查看版本</span>
+<span class="token function">java</span> <span class="token parameter variable">-version</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="1-3-创建用户授予sudo权限"><a href="#1-3-创建用户授予sudo权限" class="headerlink" title="1.3  创建用户授予sudo权限"></a>1.3  创建用户授予sudo权限</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 在home路径下创建用户，创建文件夹test</span>
+<span class="token function">useradd</span> <span class="token parameter variable">-d</span> /home/test <span class="token parameter variable">-m</span> <span class="token builtin class-name">test</span>
+<span class="token comment"># 设置密码</span>
+<span class="token function">passwd</span> <span class="token builtin class-name">test</span>
+<span class="token comment"># 命令行的模式换为bash，默认是sh</span>
+<span class="token function">usermod</span> <span class="token parameter variable">-s</span> /bin/bash <span class="token builtin class-name">test</span>
+<span class="token comment"># 把test用户添加到sudo和admin用户组里面</span>
+<span class="token function">usermod</span> <span class="token parameter variable">-a</span> <span class="token parameter variable">-G</span> <span class="token function">sudo</span> <span class="token builtin class-name">test</span>
+<span class="token function">usermod</span> <span class="token parameter variable">-a</span> <span class="token parameter variable">-G</span> adm <span class="token builtin class-name">test</span>
+<span class="token comment"># 检查test所在用户组</span>
+<span class="token function">groups</span> <span class="token builtin class-name">test</span>
+<span class="token comment"># 验证是否成功</span>
+<span class="token function">sudo</span> <span class="token function">su</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2-安装软件"><a href="#2-安装软件" class="headerlink" title="2. 安装软件"></a>2. 安装软件</h2><h3 id="2-1-软件压缩包"><a href="#2-1-软件压缩包" class="headerlink" title="2.1  软件压缩包"></a>2.1  软件压缩包</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">tar</span> zxf pycharm-community-2018.3.tar.gz       <span class="token comment">##解压</span>
+<span class="token comment"># xvf   .tar.bz2</span>
+<span class="token comment"># -z或--gzip或--ungzip 通过gzip指令处理备份文件</span>
+<span class="token comment"># -v或--verbose 显示指令执行过程。</span>
+
+<span class="token builtin class-name">cd</span>  pycharm-community-2018.3/bin
+./pycharm.sh                                 <span class="token comment">##运行pycharm安装脚本</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-2-python-pip"><a href="#2-2-python-pip" class="headerlink" title="2.2  python+pip"></a>2.2  python+pip</h3><p>安装pip</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 安装默认pip  (9.0.1版本，对应python2.7)</span>
+<span class="token function">apt</span> <span class="token function">install</span> python-pip / python3-pip
+<span class="token comment"># 卸载默认pip</span>
+<span class="token function">apt</span> remove python-pip
+
+<span class="token comment"># 升级pip   (21.3.1版本，对应python3)</span>
+python <span class="token parameter variable">-m</span> pip <span class="token function">install</span> <span class="token parameter variable">--upgrade</span> pip 
+<span class="token comment"># 卸载升级的pip </span>
+pip uninstall pip
+
+<span class="token comment"># 修改python默认版本</span>
+$ <span class="token function">which</span> python
+/usr/bin/python
+$ <span class="token function">sudo</span> <span class="token function">rm</span> /usr/bin/python
+$ python
+~bash: /usr/bin/python: No such <span class="token function">file</span> or directory
+$ <span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/bin/python3.6 /usr/bin/python
+$ python <span class="token parameter variable">-V</span>
+Python <span class="token number">3.6</span>.9
+
+<span class="token comment"># 修改pip默认版本</span>
+$ <span class="token function">which</span> pip3
+$ <span class="token function">rm</span> /usr/bin/pip
+$ <span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/local/bin/pip3 /usr/bin/pip<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>pip安装库到对应python版本</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 环境变量加别名[可选]</span>
+<span class="token builtin class-name">echo</span> <span class="token string">"alias py27='usr/bin/python2.7'"</span> <span class="token operator">>></span> ~/.bash_aliases <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">source</span> ~/.bash_aliases
+<span class="token builtin class-name">echo</span> <span class="token string">"alias py36='usr/bin/python3.6'"</span> <span class="token operator">>></span> ~/.bash_aliases <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">source</span> ~/.bash_aliases
+<span class="token comment"># 使用（安装到/usr/local/lib/python版本号/dist-packages下）</span>
+py27 <span class="token parameter variable">-m</span> pip <span class="token function">install</span> 库<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>python更换版本保留以前库</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 保存</span>
+pip freeze <span class="token operator">></span> library.txt
+<span class="token comment"># ---安装python---</span>
+<span class="token comment"># 重新安装</span>
+pip <span class="token function">install</span> <span class="token parameter variable">-r</span> library.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p> pip指定安装位置</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> xxx <span class="token parameter variable">--target</span><span class="token operator">=</span><span class="token string">'路径'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="2-3-Docker-安装"><a href="#2-3-Docker-安装" class="headerlink" title="2.3 Docker 安装"></a>2.3 Docker 安装</h3><p><a target="_blank" rel="noopener" href="https://www.runoob.com/docker/ubuntu-docker-install.html">https://www.runoob.com/docker/ubuntu-docker-install.html</a></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce<span class="token operator">=</span><span class="token number">5</span>:20.10.16~3-0~ubuntu-bionic docker-ce-cli<span class="token operator">=</span><span class="token number">5</span>:20.10.16~3-0~ubuntu-bionic containerd.io<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="2-4-cmake安装"><a href="#2-4-cmake安装" class="headerlink" title="2.4 cmake安装"></a>2.4 cmake安装</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt</span> <span class="token function">install</span> cmake<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># apt install wget</span>
+<span class="token comment"># sudo apt-get install -y build-essential</span>
+<span class="token comment"># sudo apt-get install libssl-dev  # 缺少openssl库 </span>
+<span class="token function">sudo</span> <span class="token function">wget</span> https://cmake.org/files/v3.22/cmake-3.22.0-rc2-linux-x86_64.tar.gz
+<span class="token function">sudo</span> <span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> cmake-3.22.0-rc2-linux-x86_64.tar.gz
+<span class="token builtin class-name">cd</span> cmake-3.22.0-rc2-linux-x86_64/
+<span class="token comment"># 创建软链接</span>
+<span class="token function">sudo</span> <span class="token function">ln</span> <span class="token parameter variable">-sf</span> /opt/cmake-3.22.0-rc2-linux-x86_64/bin/* /usr/bin/
+cmake <span class="token parameter variable">--version</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-5-安装库和C"><a href="#2-5-安装库和C" class="headerlink" title="2.5 安装库和C++"></a>2.5 安装库和C++</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt</span> <span class="token function">install</span> build-essential
+<span class="token function">apt</span> <span class="token function">install</span> gdb <span class="token comment"># 调试</span>
+<span class="token function">which</span> gcc 
+<span class="token comment"># 安装uuid</span>
+<span class="token function">apt</span> <span class="token function">install</span> uuid-dev
+<span class="token comment"># 安装gtest</span>
+<span class="token function">git</span> clone https://github.com/google/googletest.git
+<span class="token builtin class-name">cd</span> googletest
+<span class="token function">mkdir</span> build <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> build <span class="token operator">&amp;&amp;</span> cmake <span class="token punctuation">..</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token parameter variable">-j4</span>
+<span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token function">sudo</span> ldconfig<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-6-安装Clangd"><a href="#2-6-安装Clangd" class="headerlink" title="2.6 安装Clangd"></a>2.6 安装Clangd</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt-get</span> <span class="token function">install</span> clangd
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> clangd-12  <span class="token comment"># clangd-9</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>使用<code>cmd+shift+p</code>输入<code>clangd: download</code></p>
+<p>下载最新的clangd（Download language server） ，然后重启就可以使用了</p>
+<h3 id="2-7-java安装"><a href="#2-7-java安装" class="headerlink" title="2.7 java安装"></a>2.7 java安装</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> default-jre
+<span class="token function">java</span> <span class="token parameter variable">-version</span>
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> default-jdk
+javac <span class="token parameter variable">-version</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-8-Redis-安装"><a href="#2-8-Redis-安装" class="headerlink" title="2.8 Redis 安装"></a>2.8 Redis 安装</h3><p>Remote Dictionary Server，高性能key-value数据库</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt-get</span> <span class="token function">install</span> redis
+<span class="token comment"># 启动服务</span>
+systemctl start redis
+<span class="token comment"># 查看服务</span>
+<span class="token function">ps</span> -ef<span class="token operator">|</span><span class="token function">grep</span> <span class="token number">6379</span>
+<span class="token comment"># 查看服务状态</span>
+systemctl status redis
+<span class="token comment"># 停止服务</span>
+systemctl stop redis
+<span class="token comment"># python调用redis的API, 需要安装python库</span>
+pip <span class="token function">install</span> redis
+<span class="token comment"># 查看是否安装成功</span>
+<span class="token function">import</span> redis
+
+<span class="token comment"># redis 取出的结果默认是字节，我们可以设定 decode_responses=True 改成字符串。</span>
+redis_conn <span class="token operator">=</span> redis.Redis<span class="token punctuation">(</span>host<span class="token operator">=</span><span class="token string">'127.0.0.1'</span>, <span class="token assign-left variable">port</span><span class="token operator">=</span> <span class="token number">6379</span> , <span class="token assign-left variable">db</span><span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+redis_conn.set<span class="token punctuation">(</span><span class="token string">'key'</span>,<span class="token string">'Hello redis'</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>redis_conn.get<span class="token punctuation">(</span><span class="token string">'key'</span><span class="token punctuation">)</span>）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><h3 id="解锁带锁的文件"><a href="#解锁带锁的文件" class="headerlink" title="解锁带锁的文件"></a>解锁带锁的文件</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token parameter variable">-R</span> <span class="token number">777</span> 目录名/文件名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="vim上下左右删除键失效"><a href="#vim上下左右删除键失效" class="headerlink" title="vim上下左右删除键失效"></a>vim上下左右删除键失效</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 卸载原来的vim：</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> remove vim-common
+<span class="token comment"># 安装新的vim：</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">vim</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+        </article>
+        <section class="post-near">
+            <ul>
+                
+                    <li>上一篇: 看完啦 (つд⊂)</li>
+                
+                
+                    <li>下一篇: 看完啦 (つд⊂)</li>
+                
+            </ul>
+        </section>
+        
+            <section class="post-tags">
+            <a class="-none-link" href="/drmmsu/tags/Linux/" rel="tag">Linux</a>
+            </section>
+        
+    
+        <section class="post-author">
+        
+            <figure class="author-avatar">
+                <img src="/drmmsu/about/me/avatar.jpg" alt="Drmmsu" />
+            </figure>
+        
+            <div class="author-info">
+                <h4>Drmmsu</h4>
+                <p>我的学习笔记</p>
+            </div>
+        </section>
+    
+    </div>
+</main>
+
+    <footer>
+    <div class="buttons">
+        <a class="to-top" href="#"></a>
+    </div>
+    <div class="wrap min">
+        <section class="widget">
+            <div class="row">
+                <div class="col-m-4">
+                    <h3 class="title-recent">最新文章：</h3>
+                    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/drmmsu/2023/11/20/Linux-Ubuntu/">Ubuntu</a></li></ul>
+                </div>
+                <div class="col-m-4">
+                    <h3 class="title-date">时光机：</h3>
+                    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/drmmsu/archives/2023/11/">十一月 2023</a></li></ul>
+                </div>
+                <div class="col-m-4">
+                    <h3 class="title-tags">标签云：</h3>
+                    <a href="/drmmsu/tags/Linux/" style="font-size: 10px;">Linux</a>
+                </div>
+            </div>
+        </section>
+        <section class="sub-footer">
+            <p>© 2023 <a href="/drmmsu/">Drmmsu的个人主页</a>. All Rights Reserved. Theme By <a href="https://github.com/Dreamer-Paul/Hingle" target="_blank" rel="nofollow">Hingle</a>.</p>
+        </section>
+    </div>
+</footer>
+
+
+<script src="/drmmsu/static/kico.js"></script>
+<script src="/drmmsu/static/hingle.js"></script>
+
+
+<script>var hingle = new Paul_Hingle({"copyright":true,"night":false});</script>
+
+  </body>
+</html>
